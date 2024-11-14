@@ -22,7 +22,7 @@ let altura = 1.68;
 
 // Booleano
 let esSoltero = false;
-let esMayorDeEdad = edad >= 18;
+let esMayorDeEdad = edad >= 18; // -> true
 
 // Undefined
 let hijos = null; // -> null es un valor especial que representa la ausencia de valor
