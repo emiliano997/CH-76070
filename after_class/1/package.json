@@ -1,0 +1,16 @@
+{
+  "name": "after-class",
+  "version": "0.0.0",
+  "description": "Proyecto de Node.js para el After Class",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "after",
+    "class"
+  ],
+  "author": "Emiliano Perez",
+  "license": "ISC"
+}
