@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "John",
+    "lastName": "Doe",
+    "age": 30,
+    "course": "Full Stack JavaScript"
+  },
+  {
+    "id": 2,
+    "name": "Javier",
+    "lastName": "Aparicio",
+    "age": 30,
+    "course": "Frontend React"
+  }
+]
