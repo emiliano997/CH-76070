@@ -1,0 +1,43 @@
+{{! #if booleano }}
+{{#if isAdmin}}
+  <h1>Bienvenido a la página protegida</h1>
+
+  <h3>
+    Datos importantes
+  </h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each datos}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.email}}</td>
+          <td>
+
+            <a
+              class="btn btn-large waves-effect waves-light red"
+              href="/delete/{{this.id}}"
+            >Delete</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+{{else}}
+  <h1>
+    No podés acceder a esta página
+  </h1>
+{{/if}}
+
+<script src="/js/protected.js"></script>
