@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="text-center">Registro de Pokemones</h1>
+
+  <form id="form">
+    <input type="text" placeholder="Nombre" id="name" />
+    <input type="text" placeholder="Tipo" id="type" />
+    <input type="number" placeholder="Nivel" id="level" />
+    <input type="submit" value="Guardar" class="btn" />
+  </form>
+
+  <ul class="collection" id="pokemones"></ul>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
