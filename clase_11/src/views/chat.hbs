@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>
+    Chat general
+  </h1>
+
+  <p id="username"></p>
+  <textarea
+    class="materialize-textarea"
+    name="message"
+    id="message"
+    rows="4"
+    style="resize: none;"
+    placeholder="Message"
+  ></textarea>
+  <input class="btn" type="submit" value="Send" id="send" />
+
+  <ul class="collection" id="messages" style="margin-top: 10px;"></ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
