@@ -1,0 +1,13 @@
+<h1>
+  Home Page
+</h1>
+
+<ul class="collection">
+  {{#each pokemons}}
+    <li class="collection-item">
+      {{this.name}}
+      -
+      {{this.type}}
+    </li>
+  {{/each}}
+</ul>

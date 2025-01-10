@@ -1,0 +1,13 @@
+### GET Pokemons
+
+GET http://localhost:5000/api/pokemons
+
+### POST Pokemon
+
+POST http://localhost:5000/api/pokemons
+Content-Type: application/json
+
+{
+  "name": "Growlithe",
+  "type": "Fire"
+}
