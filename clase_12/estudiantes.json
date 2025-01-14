@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Tamara",
+    "apellido": "Canzobre",
+    "curso": "Programación Backend",
+    "correo": "tmara@gmail.com"
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "curso": "Programación Backend",
+    "correo": "juan@gmail.com"
+  },
+  {
+    "nombre": "Lucas",
+    "apellido": "Gomez",
+    "curso": "Programación Backend",
+    "correo": "lucas@gmail.com"
+  },
+  {
+    "nombre": "Mariana",
+    "apellido": "Gomez",
+    "curso": "Programación Frontend",
+    "correo": "mariana@gmail.com"
+  },
+  {
+    "nombre": "Cristian",
+    "apellido": "Quintero",
+    "curso": "Programación Full Stack",
+    "correo": "cristian@gmail.com"
+  }
+]

@@ -1,0 +1,15 @@
+> show dbs
+
+> db.getName() -> Me devuelve el nombre de la base de datos
+
+> db.createCollection("<nombre>") -> Crea una colección
+
+> use <db_name> -> Utilizar una base de datos específica
+
+> db.usuarios.insertOne({ name: "Alan", edad: 23 }) -> Crear documentos
+
+ACTIVIDAD PRÁCTICA
+
+> db.createCollection("estudiantes")
+
+> db.estudiantes.insertOne({ nombre: "Francisco", apellido: "Lencina", curso: "Programación Frontend", correo: "francisco@gmail.com" })
