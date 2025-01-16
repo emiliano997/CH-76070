@@ -1,0 +1,60 @@
+Common Filters
+
+$and
+> db.filters.find({ $and: [ { sexo: "H", curso: "Frontend" } ] })
+
+$gt y $gte
+> db.filters.find({ $and: [ { curso: "Backend", edad: { $gt: 30 } } ] })
+> db.filters.find({ $and: [ { sexo: "H", edad: { $gte: 30 } } ] })
+
+$or, $lt y $lte
+> db.filters.find({ $or: [ { curso: "Backend"}, { edad: { $lte: 35 }} ] })
+> db.filters.find({ $or: [ { sexo: "M"}, { edad: { $lt: 35 }} ] })
+
+$exists
+> db.filters.find({ direccion: { $exists: true } })
+
+Array Filters
+
+$in
+> db.filters.find({ notas: { $in: [ 1, 2 ] } })
+
+$nin
+> db.filters.find({ notas: { $nin: [1, 2, 4] } })
+
+$size
+> db.filters.find({ notas: { $size: 4} })
+
+$all
+> db.filters.find({ notas: { $all: [3, 4] } })
+
+$elemMatch
+> db.filters.find({ notas: { $elemMatch: { $gt: 3, $lt: 5} } })
+
+Other Queries
+
+disctinct
+> db.filters.distinct("curso")
+
+Sub documents
+> db.filters.find({ "direccion.calle": "Av. Siempre Viva" })
+
+Proyecciones
+
+> db.filters.find({ curso: "Backend" }, { nombre: 1, edad: 1, _id: 0 })
+> db.filters.find({ curso: "Frontend" }, { nombre: 1, edad: 1, _id: 0 })
+
+Sort (Ordenamiento)
+
+> db.filters.find({ curso: "Frontend" }).sort({ edad: 1 })
+> db.filters.find({ curso: "Frontend" }).sort({ edad: -1 })
+
+Siempre me toma el primer campo que le indique para ordenar
+> db.filters.find().sort({ edad: -1, nombre: 1 })
+
+Skip y Limit
+> db.filters.find({}, { nombre: 1, apellido: 1, correo: 1, edad: 1, _id: 0}).sort({ nombre: 1 }).skip(0).limit(2)
+
+Vemos el resultado del siguiente filtro, porque hay un usuario sin correo
+> db.filters.find({}, { correo: 1, _id: 0}).sort({ nombre: 1 }).skip(0).limit(2)
+

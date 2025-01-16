@@ -1,0 +1,54 @@
+User la base de datos "users-system"
+> use users-system 
+
+Creamos la coleccion users insertando un usuario
+> db.users.insertOne({ name: "Tamara Canzobre",  email: "tamara@gmail.com", genre: "F"});
+
+Creamos dos datos al mismo tiempo
+> db.users.insertMany([{ name: "Cristian Quintero", email: "cristian@gmail.com", genre: "M" }, { name: "Laureano Gonzalez", email: "laureano@gmail.com", genre: "M"}]);
+
+Contar los documentos de una colección
+> db.users.countDocuments();
+
+Contar todos los documentos que tengan "genre": "M"
+> db.users.countDocuments({ genre: "M" });
+
+----------------
+Ejemplo
+----------------
+
+Crear colección mascotas insertando 3 mascotas
+> db.mascotas.insertMany([{ name: "Leia", specie: "Dog", age: 6 }, { name: "Ingrid", specie: "Cat" , age: 10 }, { name: "Morita", specie: "Dog", age: 11 }])
+
+Buscamos mascotas por la especie
+> db.mascotas.find({ specie: "Dog" })
+
+Contar las mascotas agregadas
+> db.mascotas.countDocuments()
+
+----------------
+Update
+----------------
+
+Update con ID
+> db.filters.updateOne({ _id: ObjectId("67884c854d0930e0e22b5c9e") }, { $set: { correo: "jose@gmail.com" }  })
+
+Renombramos el campo "sexo" por "genero"
+> db.filters.updateMany({}, { $rename: { "sexo": "genero" } })
+
+Actualizamos genero "M" a "F"
+> db.filters.updateMany({ genero: "M" }, { $set: { genero: "F" } })
+
+Actualizamos genero "H" a "M"
+> db.filters.updateMany({ genero: "H" }, { $set: { genero: "M" } })
+
+---------------
+Delete
+---------------
+
+Delete a los usuarios del curso "Fullstack"
+> db.filters.deleteMany({ curso: "Fullstack" })
+
+Delete al usuario con el campo dirección
+> db.filters.deleteOne({ direccion: { $exists: true } })
+
