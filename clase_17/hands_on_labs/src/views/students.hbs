@@ -1,0 +1,56 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> Group </th>
+        <th scope="col"> First Name </th>
+        <th scope="col"> Last Name </th>
+        <th scope="col"> Grade </th>
+        <th scope="col"> Gender </th>
+        <th scope="col"> Email </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each students.docs}}
+        <tr>
+          <td> {{this.group}}</td>
+          <td> {{this.first_name}}</td>
+          <td> {{this.last_name}}</td>
+          <td> {{this.grade}} </td>
+          <td> {{this.gender}} </td>
+          <td> {{this.email}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+  <div class="position-relative m-4">
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        {{#if students.hasPrevPage}}
+          <li class="page-item">
+            <a class="page-link" href="/?page={{students.prevPage}}&&limit=5">
+              Previous
+            </a>
+          </li>
+        {{/if}}
+
+        {{! Links a siguientes páginas }}
+
+        {{#if students.hasNextPage}}
+          <li class="page-item"><a
+              class="page-link"
+              href="/?page={{students.nextPage}}&&limit=5"
+            >Next</a></li>
+        {{/if}}
+
+      </ul>
+    </nav>
+    <p class="btn btn-primary">
+      Current Page:
+      {{students.page}}
+    </p>
+  </div>
+
+</div>
